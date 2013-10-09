@@ -1,5 +1,4 @@
-Simple-Backup
-===
+# Simple-Backup
 
 The Simple-Backup is written in perl and was created by me around 2002. I used it quite a lot in the last year and maybe it is as useful for you as it is for me.
 
@@ -21,3 +20,7 @@ This simple backup script is configured with a configuration file currently loca
 
 The configuration allows you to define if you want to create incremental backups or not as well as the possibility to create a full backup every 10. 20 and 30. of the month. If you define it, the backup script can delete incremental backups. Deleting of the backups works like that. If the script runs on the 30., the incremental backups from the 11. to the 19 are deleted. That procedure allows you to always having the full backups and at least the last 10 days of incremental backups.
 
+# Installation
+
+
+To install the Simple-Backup utility visit the [Simple-Backup Github project](https://github.com/tinned-software/simple-backup) and download it. After you have uploaded the files to your server, copy the file "backup_example.conf" to "backup.conf" and change its configuration values. To start a backup run execute the "backup.pl" file.
