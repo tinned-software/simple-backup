@@ -1,4 +1,4 @@
-# Simple-Backup
+## Simple-Backup
 
 The Simple-Backup is written in perl and was created by me around 2002. I used it quite a lot in the last year and maybe it is as useful for you as it is for me.
 
@@ -16,13 +16,13 @@ This Simple-Backup script aims to backup the configured directories into tar gz 
 *     Individual log-files for each backup run
 
 
-## Download & Installation
+### Download & Installation
 
-[Download Download Simple-Backup from Github](https://github.com/tinned-software/simple-backup)
+![image](http://www.tinned-software.net/images/icons/download.png) **[Download Download Simple-Backup from Github](https://github.com/tinned-software/simple-backup)**
 
 To install the the script download it from Github and upload it to your server. Copy the file "**backup_example.conf**" to "**backup.conf**" and change its configuration values. The configuration file contains a description for its configuration items. To start a backup run execute the "backup.pl" file.
 
-## Description
+### Description
 
 This Simple-Backup script is configured with a configuration file currently located in the same directory as the script itself. The configuration file contains a number of configuration items which are documented directly in the configuration file. You can configure a list of directories to backup. When the backup script is running it will check the files in this directory and create a md5 checksum of each file. The checksum of every file is compared to the checksum from the last backup run. If it is different, the file will be marked for backup. At the end of the compare process the list with the new md5 sums as well as a list of files to backup is written and archived together with the files itself.
 
