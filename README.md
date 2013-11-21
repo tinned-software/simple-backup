@@ -18,7 +18,7 @@ This Simple-Backup script aims to backup the configured directories into tar gz 
 
 ### Download & Installation
 
-![image](http://www.tinned-software.net/images/icons/download.png) **[Download Download Simple-Backup from Github](https://github.com/tinned-software/simple-backup)**
+![image](http://www.tinned-software.net/images/icons/download.png) **[Download Simple-Backup from Github](https://github.com/tinned-software/simple-backup)**
 
 To install the the script download it from Github and upload it to your server. Copy the file "**backup_example.conf**" to "**backup.conf**" and change its configuration values. The configuration file contains a description for its configuration items. To start a backup run execute the "backup.pl" file.
 
