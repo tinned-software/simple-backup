@@ -12,6 +12,7 @@ This simple backup script aims to backup the configured directories into tar gz 
 - Excluding files from the backup using regular expression.
 - Email notification after backup. This can be configured to be sent always or only on error.
 - Individual log-files for each backup run.
+- Subroutine for the config-file to add configuration for individual archives from each user's home directory
 
 
 This simple backup script is configured with a configuration file currently located in the same directory as the script itself. The configuration file contains anumber of configuration items which are documented directly in the configuration file. You can configure a list of directories to backup. When the backup script is running it will check the files in this directory and create a md5 checksum of each file. The checksum of every file is compared to the checksum from the last backup run. If it is different, the file will be marked for backup. At the end of the compare process the list with the new md5 sums as well as a list of files to backup is written and archived together with the files itself.

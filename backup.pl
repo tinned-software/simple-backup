@@ -2,7 +2,7 @@
 #
 # @author Gerhard Steinbeis (info [at] tinned-software [dot] net)
 # @copyright Copyright (c) 2002 - 2013
-$version_0 = "0.21";
+$version_0 = "1.1";
 # @license http://opensource.org/licenses/GPL-3.0 GNU General Public License, version 3
 # @package backup
 #
@@ -27,6 +27,7 @@ $cmd_date = "/bin/date";
 
 $backup_function = $path."backup_function.pl";
 $backup_error = $path."backup_error.pl";
+$backup_user_archive = $path."backup_user_archive.pl";
 $backup_help = $path."backup_help.txt";
 $backup_config = $path."backup.conf";
 
@@ -43,10 +44,11 @@ if($ARGV[0] eq "-v"){
     print "\n";
     print "Backup Executeable\n";
     print "   Version $version_0\n";
-    print "   Copyright 2000-2013 by Gerhard Steinbeis\n";
+    print "   Copyright 2000-2014 by Gerhard Steinbeis\n";
     require("$backup_function");
     require("$backup_error");
-    print "\nVERSION: $version_0$version_1$version_2\n";
+    require("$backup_user_archive");
+    print "\nVERSION: $version_0$version_1$version_2$version_3\n";
     print "----------------------------------------------\n\n";
     open(FILE,"< $backup_help");
     while(<FILE>){
@@ -64,9 +66,10 @@ if($ARGV[0] eq "-v"){
 $version_check = "1";
 $version_1 = require("$backup_function");
 $version_2 = require("$backup_error");
+$version_3 = require("$backup_user_archive");
 $version_check = "0";
 $version_string =  "\nBackup script copyright 2000-2004 by Gerhard Steinbeis\n";
-$version_string .=  "Backup script version: $version_0$version_1$version_2\n\n";
+$version_string .=  "Backup script version: $version_0$version_1$version_2$version_3\n\n";
 $line = $version_string;
 $mail = $mail.$line;    ### mail_content
 print $line;
@@ -83,6 +86,7 @@ if($ARGV[0] eq "-e"){
 
 
 
+require("$backup_user_archive");
 require("$backup_config");
 open(STDERR, "> /dev/null");    #redirect error out
 $exec_time_start = time;
