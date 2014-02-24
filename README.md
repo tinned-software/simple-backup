@@ -14,6 +14,7 @@ This Simple-Backup script aims to backup the configured directories into tar gz 
 *     Excluding files from the backup using regular expression
 *     Email notification after backup which can be configured to be sent always or only on error
 *     Individual log-files for each backup run
+*     Subroutine for the config-file to add configuration for individual archives from each user's home directory
 
 
 ### Download & Installation
