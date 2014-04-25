@@ -13,7 +13,7 @@ if($ARGV[0] eq "-v"){
     print "\n";
     print "Backup Directory Archive Config\n";
     print "   Version 0$version_3\n";
-    print "   Copyright 2014 by Gerhard Steinbeis\n";q
+    print "   Copyright 2014 by Gerhard Steinbeis\n";
     return true;
 }
 
