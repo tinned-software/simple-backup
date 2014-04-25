@@ -28,6 +28,7 @@ $cmd_date = "/bin/date";
 $backup_function = $path."backup_function.pl";
 $backup_error = $path."backup_error.pl";
 $backup_user_archive = $path."backup_user_archive.pl";
+$backup_dir_archive = $path."backup_directory_archive.pl";
 $backup_help = $path."backup_help.txt";
 $backup_config = $path."backup.conf";
 
@@ -48,6 +49,7 @@ if($ARGV[0] eq "-v"){
     require("$backup_function");
     require("$backup_error");
     require("$backup_user_archive");
+    require("$backup_dir_archive");
     print "\nVERSION: $version_0$version_1$version_2$version_3\n";
     print "----------------------------------------------\n\n";
     open(FILE,"< $backup_help");
@@ -67,6 +69,7 @@ $version_check = "1";
 $version_1 = require("$backup_function");
 $version_2 = require("$backup_error");
 $version_3 = require("$backup_user_archive");
+$version_4 = require("$backup_dir_archive");
 $version_check = "0";
 $version_string =  "\nBackup script copyright 2000-2004 by Gerhard Steinbeis\n";
 $version_string .=  "Backup script version: $version_0$version_1$version_2$version_3\n\n";
@@ -87,6 +90,7 @@ if($ARGV[0] eq "-e"){
 
 
 require("$backup_user_archive");
+require("$backup_dir_archive");
 require("$backup_config");
 open(STDERR, "> /dev/null");    #redirect error out
 $exec_time_start = time;
